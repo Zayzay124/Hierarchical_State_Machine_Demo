@@ -11,6 +11,8 @@ public class EnemyPatrolState : State
     public float timeout;
     public GameObject pointsObject;
 
+    private int timesAttacked = 0;
+
     public override void Enter()
     {
         if (points.Count < 1)
@@ -36,7 +38,11 @@ public class EnemyPatrolState : State
         if (timer > timeout)
         {
             timer = 0.0f;
-            SwitchState(_machine.States["Shoot"]);
+            //Randomize State we go into or do one of each?
+            if (timesAttacked % 2 == 0) { SwitchState(_machine.States["Shoot"]); }
+            else { SwitchState(_machine.States["Dive"]); }
+
+            SwitchState(_machine.States["Dive"]);
         }
     }
 

@@ -11,7 +11,7 @@ public class EnemyPhase1State : State
     public override void Enter()
     {
         Debug.Log("Entered Phase 1 State");
-        InitializeSubState(); //not null if called here
+        InitializeSubState();
     }
 
     public override void Exit() { }
