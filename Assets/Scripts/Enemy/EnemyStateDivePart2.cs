@@ -19,7 +19,9 @@ public class EnemyDivePart2State : State
         entity.transform.position = Vector2.MoveTowards(entity.transform.position, diveState.OriginPos, diveState.returnSpeed * Time.deltaTime);
         if ((Vector2)entity.transform.position == diveState.OriginPos)
         {
-            SwitchState(_machine.States["Patrol"]);
+            CurrentSuperState.SwitchState(_machine.States["Patrol"]); // this is a solution
+            //diveState.SwitchState(_machine.States["Patrol"]);
+            //SwitchState(_machine.States["Patrol"]);
         }
     }
 

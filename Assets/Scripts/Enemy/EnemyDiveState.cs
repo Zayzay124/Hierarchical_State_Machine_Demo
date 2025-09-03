@@ -12,6 +12,11 @@ public class EnemyDiveState : State
     public Vector2 OriginPos { get { return originPos; } }
     public Vector2 TargetPos { get { return targetPos; } }
 
+    /*public EnemyDiveState()
+    {
+        IsRootState = true;
+    }*/
+
     public override void Enter()
     {
         originPos = entity.transform.position;
@@ -20,7 +25,10 @@ public class EnemyDiveState : State
         InitializeSubState();
     }
 
-    public override void Exit() { }
+    public override void Exit()
+    {
+        Debug.Log("Fully Exited");
+    }
 
     public override void Process() { }
 

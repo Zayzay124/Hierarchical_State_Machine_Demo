@@ -76,7 +76,7 @@ public abstract class State : MonoBehaviour
         ExitStates();
         //new state enters
         newState.EnterStates();
-        if (newState.IsRootState)
+        if (newState.IsRootState) // this logic may be flawed for the type of statemachine we need
         {
             // switches current state
             _machine.currentState = newState;
@@ -86,6 +86,7 @@ public abstract class State : MonoBehaviour
             // set the current super states sub state to the new state
             CurrentSuperState.SetSubState(newState);
         }
+        //maybe run some checks here
     }
 
     public void SetSuperState(State newSuperState)

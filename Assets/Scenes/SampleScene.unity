@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entity: {fileID: 97355347}
   _machine: {fileID: 1227989136}
-  timeout: 2
+  timeout: 3
   pointsObject: {fileID: 1913297666}
 --- !u!1 &966593748
 GameObject:

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyPatrolState : State
@@ -39,10 +40,12 @@ public class EnemyPatrolState : State
         {
             timer = 0.0f;
             //Randomize State we go into or do one of each?
-            if (timesAttacked % 2 == 0) { SwitchState(_machine.States["Shoot"]); }
-            else { SwitchState(_machine.States["Dive"]); }
-
-            SwitchState(_machine.States["Dive"]);
+            if (timesAttacked == 0) { SwitchState(_machine.States["Shoot"]); timesAttacked++; }
+            else if (timesAttacked == 1) { SwitchState(_machine.States["Dive"]); timesAttacked++; }
+            else if (timesAttacked == 2) { SwitchState(_machine.States["Shoot"]); timesAttacked++; }
+            else if (timesAttacked == 3) { SwitchState(_machine.States["Dive"]); timesAttacked++; }
+            else if (timesAttacked == 4) { SwitchState(_machine.States["Shoot"]); timesAttacked++; }
+            else if (timesAttacked == 5) { SwitchState(_machine.States["Dive"]); timesAttacked++; }
         }
     }
 
