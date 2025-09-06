@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyDiveState : State
+public class DiveState : State
 {
     private Vector2 originPos;
     private Vector2 targetPos;

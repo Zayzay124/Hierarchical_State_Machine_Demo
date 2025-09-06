@@ -1,9 +1,9 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyPhase1State : State
+public class Phase1State : State
 {
-    public EnemyPhase1State()
+    public Phase1State()
     {
         IsRootState = true;
     }
@@ -18,7 +18,6 @@ public class EnemyPhase1State : State
 
     public override void Process()
     {
-        //Debug.Log("Phase 1ing");
         CheckSwitchStates();
     }
 

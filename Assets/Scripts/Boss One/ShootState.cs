@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyShootState : State
+public class ShootState : State
 {
 
     public float StartupTime;

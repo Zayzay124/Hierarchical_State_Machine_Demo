@@ -6,20 +6,20 @@ public abstract class State : MonoBehaviour
 
 
     public Entity entity;
-    public EnemyStateMachine _machine;
+    public StateMachine _machine;
 
     private bool _isRootState = false;
     private State _currentSubState;
     private State _currentSuperState;
 
-    public EnemyStateMachine Machine { get { return _machine; } set { _machine = value; } }
+    public StateMachine Machine { get { return _machine; } set { _machine = value; } }
     public bool IsRootState { get { return _isRootState; } set { _isRootState = value; } }
     public State CurrentSubState { get { return _currentSubState; } }
     public State CurrentSuperState { get { return _currentSuperState; } }
 
     void Awake()
     {
-        _machine = GetComponentInParent<EnemyStateMachine>();
+        _machine = GetComponentInParent<StateMachine>();
     }
 
     public abstract void Enter();
@@ -76,7 +76,7 @@ public abstract class State : MonoBehaviour
         ExitStates();
         //new state enters
         newState.EnterStates();
-        if (newState.IsRootState) // this logic may be flawed for the type of statemachine we need
+        if (newState.IsRootState)
         {
             // switches current state
             _machine.currentState = newState;
@@ -86,7 +86,6 @@ public abstract class State : MonoBehaviour
             // set the current super states sub state to the new state
             CurrentSuperState.SetSubState(newState);
         }
-        //maybe run some checks here
     }
 
     public void SetSuperState(State newSuperState)

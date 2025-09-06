@@ -1,7 +1,7 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class EnemyStateMachine : MonoBehaviour
+public class StateMachine : MonoBehaviour
 {
     public State initialState;
     public State currentState;
