@@ -185,7 +185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &97355345
 Transform:
   m_ObjectHideFlags: 0
@@ -1370,7 +1370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entity: {fileID: 97355347}
   _machine: {fileID: 1227989136}
-  StartupTime: 0.25
+  StartupTime: 1.5
   CBSpawnerPrefab: {fileID: 8754067544208001220, guid: e31cbcc6684929c468d1346ef0203b7f, type: 3}
   spawnPoint: {fileID: 316948929}
 --- !u!1 &1748441791
@@ -1661,6 +1661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2096726125}
   - component: {fileID: 2096726124}
+  - component: {fileID: 2096726127}
   - component: {fileID: 2096726126}
   m_Layer: 0
   m_Name: Player
@@ -1751,6 +1752,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eedd9d832ed72e346813953d57f7b305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSpeed: 5
+  maxSpeed: 10
+  rb: {fileID: 2096726127}
+--- !u!50 &2096726127
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096726123}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 10
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2106027895
 GameObject:
   m_ObjectHideFlags: 0
