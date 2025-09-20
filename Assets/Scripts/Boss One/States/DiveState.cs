@@ -12,15 +12,11 @@ public class DiveState : State
     public Vector2 OriginPos { get { return originPos; } }
     public Vector2 TargetPos { get { return targetPos; } }
 
-    /*public EnemyDiveState()
-    {
-        IsRootState = true;
-    }*/
-
     public override void Enter()
     {
         originPos = entity.transform.position;
-        targetPos = entity.Player.transform.position;
+        targetPos = entity.GetComponent<BirdBoss>().Player.transform.position;
+        //targetPos = entity.Player.transform.position;
         Debug.Log("Entered Dive State");
         InitializeSubState();
     }

@@ -1,27 +1,24 @@
+using System;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    private int currentHealth;
 
-    private GameObject player;
-    private Vector2 playerDirection;
+    public int maxHealth;
 
-    public GameObject Player { get { return player; } }
-    public Vector2 PlayerDirection { get { return playerDirection; } }
-
-    void Awake()
+    public void TakeDamage(int amount)
     {
-        player = GameObject.Find("Player");
+        currentHealth -= amount;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
-    void Start()
+    private void Die()
     {
-
+        Destroy(this.gameObject);
     }
-
-    void Update()
-    {
-        playerDirection = (Vector2)player.transform.position - (Vector2)transform.position;
-    }
-
 }

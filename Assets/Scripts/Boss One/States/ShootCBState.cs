@@ -36,6 +36,6 @@ public class ShootCBState : State
     public void Shoot()
     {
         CrossbeamSpawner cbSpawner = Instantiate(CBSpawnerPrefab);
-        cbSpawner.Init(spawnPoint.transform.position, entity.PlayerDirection);
+        cbSpawner.Init(spawnPoint.transform.position, entity.GetComponent<BirdBoss>().PlayerDirection);
     }
 }

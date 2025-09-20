@@ -36,6 +36,6 @@ public class ShootState : State
     public void Shoot()
     {
         Projectile projectile = Instantiate(projectilePrefab);
-        projectile.Init(spawnPoint.transform.position, entity.PlayerDirection);
+        projectile.Init(spawnPoint.transform.position, entity.GetComponent<BirdBoss>().PlayerDirection);
     }
 }
