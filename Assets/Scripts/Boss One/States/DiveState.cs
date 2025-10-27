@@ -9,14 +9,16 @@ public class DiveState : State
     public float returnSpeed;
     public float waitTime = 0.5f;
 
+    public BirdBoss boss;
+
     public Vector2 OriginPos { get { return originPos; } }
     public Vector2 TargetPos { get { return targetPos; } }
 
     public override void Enter()
     {
         originPos = entity.transform.position;
-        targetPos = entity.GetComponent<BirdBoss>().Player.transform.position;
-        //targetPos = entity.Player.transform.position;
+        //targetPos = entity.GetComponent<BirdBoss>().Player.transform.position;
+        targetPos = boss.Player.transform.position;
         Debug.Log("Entered Dive State");
         InitializeSubState();
     }

@@ -9,11 +9,11 @@ public class PatrolState : State
     private int destination = 1; //have this calulated to be the middle later
 
 
-    private List<string> stateKeys = new List<string> { "Shoot", "Dive", "Crossbeam" };
+    private List<string> stateKeys = new List<string> { "Shoot", "Dive" };
     private int stateKeyIndex = 0;
 
     public float timeout;
-    public GameObject pointsObject;
+    public GameObject pointsObject; // at some point maybe nav mesh this or have something more dynamic
 
     public override void Enter()
     {
@@ -46,8 +46,6 @@ public class PatrolState : State
 
     public IEnumerator ChangeBehavior()
     {
-        //shuffle list
-        IListExtensions.Shuffle(stateKeys);
         yield return new WaitForSeconds(timeout);
 
         //pick state according to list index
@@ -59,6 +57,7 @@ public class PatrolState : State
         {
             IListExtensions.Shuffle(stateKeys);
             stateKeyIndex = 0;
+            Debug.Log("shuffled");
         }
     }
 
@@ -72,6 +71,15 @@ public class PatrolState : State
                 destination = 0;
                 points.Reverse();
             }
+        }
+    }
+
+    public void AddBehavior(string stateName)
+    {
+        stateKeys.Add(stateName);
+        foreach (string str in stateKeys)
+        {
+            Debug.Log(str);
         }
     }
 

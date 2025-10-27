@@ -6,9 +6,9 @@
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
                 {
-                    "name": "Switch",
+                    "name": "Damage",
                     "type": "Button",
-                    "id": "c5628022-1430-4b1a-88ae-1ae8c3115897",
+                    "id": "0e59cbe4-5c00-4a4f-b0ff-a37c7852d3fb",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -18,12 +18,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "00eb4b0f-c232-4c52-b1a4-874308c35e16",
+                    "id": "1b151e37-1e01-4c02-ab12-4efea81167e3",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Switch",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Damage",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

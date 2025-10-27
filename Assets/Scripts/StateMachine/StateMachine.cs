@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
+
     public State initialState;
     public State currentState;
     public Dictionary<string, State> States = new Dictionary<string, State>();

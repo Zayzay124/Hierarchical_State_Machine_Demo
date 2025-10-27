@@ -8,6 +8,8 @@ public class ShootState : State
     public Projectile projectilePrefab;
     public Transform spawnPoint;
 
+    public BirdBoss boss;
+
     public override void Enter()
     {
         Debug.Log("Entered Shoot State");
@@ -36,6 +38,9 @@ public class ShootState : State
     public void Shoot()
     {
         Projectile projectile = Instantiate(projectilePrefab);
-        projectile.Init(spawnPoint.transform.position, entity.GetComponent<BirdBoss>().PlayerDirection);
+        //projectile.Init(spawnPoint.transform.position, entity.GetComponent<BirdBoss>().PlayerDirection);
+        projectile.Init(spawnPoint.transform.position, boss.PlayerDirection);
+
+
     }
 }
