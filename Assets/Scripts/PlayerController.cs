@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public HitboxComponent swingHitbox;
+
     void Update()
     {
         xInput = Input.GetAxisRaw("Horizontal");
@@ -49,6 +51,14 @@ public class PlayerController : MonoBehaviour
         {
             enemy.TakeDamage(5);
             Debug.Log("ouch");
+        }
+    }
+
+    public void Swing(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            swingHitbox.SetActive();
         }
     }
 }

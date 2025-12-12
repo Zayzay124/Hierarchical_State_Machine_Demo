@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Phase1State : State
 {
+    private int PhaseHealth = 20;
     public Phase1State()
     {
         IsRootState = true;
@@ -17,12 +18,12 @@ public class Phase1State : State
 
     public override void Process()
     {
-        //moe this so it isn't checking every frame
+        //change so this so it isn't checking every frame
         //only need to check on hit
-        //signal?
-        if (entity.CurrentHealth < 20)
+        //signal? event?
+        if (entity.CurrentHealth < PhaseHealth)
         {
-            SwitchState(_machine.States["Phase2"]);
+            SwitchState(_machine.States["PhaseChange"]);
         }
     }
 

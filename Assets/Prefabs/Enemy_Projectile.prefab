@@ -55,6 +55,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,6 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -154,6 +157,10 @@ PrefabInstance:
     - target: {fileID: 3175919679735818126, guid: 21f3af1342fa30d4c9cb8744efa6a76c, type: 3}
       propertyPath: m_Name
       value: HitboxComp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175919679735818126, guid: 21f3af1342fa30d4c9cb8744efa6a76c, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4137716674207663543, guid: 21f3af1342fa30d4c9cb8744efa6a76c, type: 3}
       propertyPath: m_LocalPosition.x

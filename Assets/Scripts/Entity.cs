@@ -1,5 +1,4 @@
 using System;
-using System.Linq.Expressions;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -16,6 +15,7 @@ public class Entity : MonoBehaviour
     {
         _currentHealth = maxHealth;
     }
+
     public void TakeDamage(int amount)
     {
         Debug.Log(this.name + "taken damage");
