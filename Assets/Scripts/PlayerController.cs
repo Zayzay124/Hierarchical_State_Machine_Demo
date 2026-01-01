@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     private float yInput;
     private Vector2 inputDir;
 
+    public Animator animator;
+
     public float startSpeed;
     public float maxSpeed;
     public InputActionReference space;
@@ -17,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
 
     public HitboxComponent swingHitbox;
+
+    private bool attacking = false;
 
     void Update()
     {
@@ -33,6 +37,11 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMovement()
     {
+        if (attacking)
+        {
+            return;
+        }
+
         if (inputDir == Vector2.zero)
         {
             rb.linearVelocity = Vector2.zero;
@@ -58,7 +67,9 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            swingHitbox.SetActive();
+            attacking = true;
+            swingHitbox.Activate();
         }
     }
+
 }

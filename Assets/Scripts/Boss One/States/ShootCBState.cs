@@ -13,7 +13,7 @@ public class ShootCBState : State
     public override void Enter()
     {
         Debug.Log("Entered CB State");
-        //start attack animation
+        animator.Play("Flying_Demon_Attack");
         StartCoroutine(AttackCountDown());
     }
 

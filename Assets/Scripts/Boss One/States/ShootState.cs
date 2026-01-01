@@ -13,7 +13,7 @@ public class ShootState : State
     public override void Enter()
     {
         Debug.Log("Entered Shoot State");
-        //start attack animation
+        animator.Play("Flying_Demon_Attack");
         StartCoroutine(AttackCountDown());
     }
 

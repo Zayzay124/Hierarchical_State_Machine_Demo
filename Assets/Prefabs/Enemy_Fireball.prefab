@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8067204007896923633}
   - component: {fileID: 7463184418599919929}
   - component: {fileID: 3414480686160559679}
+  - component: {fileID: 3993301139798894270}
   m_Layer: 0
-  m_Name: Enemy_Projectile
+  m_Name: Enemy_Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,6 +143,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTilDestroy: 4
+  animator: {fileID: 3993301139798894270}
+--- !u!95 &3993301139798894270
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289429753499485430}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3056e1f6ffb4f446bd5f579009a0f7a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &7071295015158982042
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class Phase2State : State
 
     public override void Process()
     {
-        if (entity.CurrentHealth < 10)
+        if (entity.CurrentHealth < Phase2Health)
         {
             SwitchState(_machine.States["PhaseChange"]);
         }

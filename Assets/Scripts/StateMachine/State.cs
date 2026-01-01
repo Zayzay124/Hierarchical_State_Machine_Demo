@@ -7,6 +7,7 @@ public abstract class State : MonoBehaviour
 
     public Entity entity;
     public StateMachine _machine;
+    public Animator animator;
 
     private bool _isRootState = false;
     private State _currentSubState;

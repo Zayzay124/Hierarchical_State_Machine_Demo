@@ -20,6 +20,7 @@ public class Entity : MonoBehaviour
     {
         Debug.Log(this.name + "taken damage");
         _currentHealth -= amount;
+        //tell state machine to use attack data to calculate knockback
         if (_currentHealth <= 0)
         {
             Die();

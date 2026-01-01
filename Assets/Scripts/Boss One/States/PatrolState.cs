@@ -17,6 +17,8 @@ public class PatrolState : State
 
     public override void Enter()
     {
+        animator.Play("Flying_Demon_Flying");
+
         if (points.Count < 1)
         {
             foreach (Transform point in pointsObject.GetComponentsInChildren<Transform>())
